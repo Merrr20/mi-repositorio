@@ -1,0 +1,190 @@
+@mixin my-mixin {
+  color: white;
+  background-color: #cd5831;
+}
+$primary-background: bisque;
+$primary-text: #e0876a;
+$secondary-background: #292929;
+$secondary-text: white;
+$transparency: transparent;
+
+$base-color: #e0876a;
+
+@for $i from 1 through 16 {
+  .container-fluid .col-xl-3.col-lg-4.col-md-6:nth-child(3n + #{$i}) {
+    .gallery-item {
+      border: 5px solid lighten($base-color, $i * 2%);
+    }
+  }
+}
+
+@mixin theme-colors($light-theme) {
+  @if $light-theme == nav {
+    background-color: $primary-background;
+    color: $primary-text;
+  } @else if $light-theme == home {
+    background-color: $transparency;
+  } @else if $light-theme == footer {
+    background-color: $secondary-background;
+    color: $secondary-text;
+  } @else {
+    @error "Unknown light-theme #{$light-theme}.";
+  }
+}
+
+body {
+  #hero .btn-get-started {
+    background-color: #e0876a;
+    border-color: #e0876a;
+  }
+
+  #header .logo a {
+    color: #e0876a;
+  }
+  #header {
+    @include theme-colors(nav);
+  }
+  #navbar .getstarted {
+    border: #cd5831 2px solid;
+    color: #cd5831;
+    &:hover {
+      @include my-mixin;
+    }
+  }
+  #hero .carousel-indicators li.active {
+    color: #cd5831;
+    background-color: #e0876a;
+    &:hover {
+      @include my-mixin;
+    }
+  }
+  #hero .carousel-indicators li {
+    color: #cd5831;
+    &:hover {
+      @include my-mixin;
+    }
+  }
+  .about .content .icon-box i,
+  .counts .count-box i,
+  .services .icon {
+    color: #e0876a;
+  }
+  .services .title::after, .testimonials .testimonial-item{
+    background: #e0876a;
+  }
+  .section-title h2 {
+    color: #e0876a;
+  }
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    background-color: #e0876a;
+  }
+  .col-lg-4 .col-md-6,
+  .pricing .box .btn-buy {
+    background-color: #e0876a;
+    color: white;
+    border: #e0876a 2px solid;
+  }
+  .pricing .recommended {
+    background-color: #e0876a;
+  }
+  .pricing .box h4 {
+    color: #e0876a;
+  }
+  .pricing .recommended h4 {
+    color: white;
+  }
+  .faq .faq-list .icon-help {
+    color: #cd5831;
+  }
+  .faq .faq-list a,
+  a.collapse {
+    color: #e0876a;
+  }
+  .contact .contact-info i,
+  .bx-chevron-right:before,
+  #footer .footer-top .footer-links ul i {
+    color: #e0876a;
+  }
+  .contact .php-email-form button[type="submit"],
+  #footer .footer-top .footer-newsletter form input[type="submit"],
+  .back-to-top,
+  .credits a {
+    color: white;
+    background-color: #e0876a;
+  }
+  #footer .footer-top .footer-newsletter form input[type="submit"]:hover,
+  .contact .php-email-form button[type="submit"]:hover,
+  #hero .btn-get-started:hover {
+    border: #cd5831 2px;
+    background-color: #cd5831;
+    color: white;
+  }
+  .faq .faq-list a.collapsed:hover,
+  #footer .footer-top .footer-links ul a:hover,
+  .contact .contact-info a:hover {
+    color: #e0876a;
+  }
+
+  .pricing .recommended .btn-buy:hover {
+    @include my-mixin;
+    border: white 2px solid;
+  }
+
+  .btn-wrap a:hover {
+    color: #e0876a;
+    background-color: white;
+  }
+  .pricing .box .btn-buy {
+    border: white 2px solid;
+    &:hover {
+      @include my-mixin;
+
+      border: 2px solid #e0876a;
+    }
+  }
+  .back-to-top {
+    &:hover {
+      @include my-mixin;
+
+      i {
+        color: #e0876a;
+      }
+    }
+  }
+  .scroll-top,
+  .page-header .cta-btn,
+  #footer .footer-top .social-links a {
+    &:hover {
+      @include my-mixin;
+    }
+  }
+  #footer .footer-top {
+    @include theme-colors(footer);
+  }
+  &.transparency {
+    #header {
+      @include theme-colors(home);
+    }
+  }
+  .header-social-links a {
+    color: #e0876a;
+    &:hover {
+      color: white;
+    }
+  }
+  .about .content ul i {
+    color:#cd5831;
+  }
+  .contact .info-item i{
+    border: 1px solid #e0876a;
+  &:hover {
+    background-color: #cd5831;
+    color: white;
+  }
+}
+#footer .footer-top .social-links a {
+    color: white;
+    background-color: #e0876a;
+}
+}
