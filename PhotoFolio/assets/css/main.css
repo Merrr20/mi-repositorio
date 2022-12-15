@@ -19,7 +19,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #e0876a;
   --color-secondary: #161718;
 }
 
@@ -1301,7 +1301,7 @@ section {
 }
 
 #hero h2 span {
-  color: #5c9f24;
+  color: #e0876a;
 }
 
 #hero p {
@@ -1376,7 +1376,7 @@ section {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #5c9f24;
+  background: #e0876a;
 }
 
 #hero .btn-get-started {
@@ -1394,15 +1394,10 @@ section {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   text-transform: uppercase;
-  border: 2px solid #5c9f24;
-  background: #5c9f24;
+  border: 2px solid #e0876a;
+  background: #e0876a;
 }
 
-#hero .btn-get-started:hover {
-  background: #6ab82a;
-  border-color: #6ab82a;
-  color: #fff;
-}
 
 @media (max-width: 768px) {
   #hero h2 {
@@ -1460,7 +1455,7 @@ section {
 .about .content .icon-box i {
   font-size: 48px;
   float: left;
-  color: #5c9f24;
+  color: #e0876a;
 }
 
 .about .content .icon-box p {
@@ -1523,7 +1518,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #5c9f24;
+  background: #e0876a;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1600,7 +1595,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #8ed851;
+  color: #e0876a;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1636,11 +1631,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #5c9f24;
+  border: 1px solid #e0876a;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5c9f24;
+  background-color: #e0876a;
 }
 
 .portfolio-details .portfolio-info {
@@ -1750,7 +1745,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #5c9f24;
+  color: #e0876a;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1855,7 +1850,7 @@ Services
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #5c9f24;
+  background: #e0876a;
   color: #fff;
   text-decoration: none;
 }
@@ -1880,7 +1875,7 @@ Services
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #8ed851;
+  color: #e0876a;
   font-size: 18px;
   line-height: 1;
 }
@@ -1903,7 +1898,7 @@ Services
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #81d33d;
+  color: #e0876a;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1929,14 +1924,14 @@ Services
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #5c9f24;
+  background: #e0876a;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #6ab82a;
+  background: #cd5831;
 }
 
 #footer .copyright {

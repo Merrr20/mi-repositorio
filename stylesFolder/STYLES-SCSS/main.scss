@@ -8,12 +8,12 @@ $secondary-background: #292929;
 $secondary-text: white;
 $transparency: transparent;
 
-$base-color: #e0876a;
+$base-color: #cd5831;
 
 @for $i from 1 through 16 {
   .container-fluid .col-xl-3.col-lg-4.col-md-6:nth-child(3n + #{$i}) {
     .gallery-item {
-      border: 5px solid lighten($base-color, $i * 2%);
+      border: 5px solid lighten($primary-text, $i * 2%);
     }
   }
 }
@@ -32,10 +32,35 @@ $base-color: #e0876a;
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   #hero .btn-get-started {
     background-color: #e0876a;
     border-color: #e0876a;
+  }
+
+  h1 {
+    color: #e0876a;
+  }
+
+  h2 {
+    color: #e0876a;
+  }
+  a:hover {
+    color: $primary-text;
+  }
+
+  .pompeii-images {
+    text-align: center;
+    img {
+      max-width: 600px;
+      width: 30%;
+    }
   }
 
   #header .logo a {
@@ -45,146 +70,341 @@ body {
     @include theme-colors(nav);
   }
   #navbar .getstarted {
-    border: #cd5831 2px solid;
-    color: #cd5831;
+    border: $base-color 2px solid;
+    color: $base-color;
     &:hover {
       @include my-mixin;
     }
   }
-  #hero .carousel-indicators li.active {
-    color: #cd5831;
-    background-color: #e0876a;
-    &:hover {
-      @include my-mixin;
-    }
-  }
-  #hero .carousel-indicators li {
-    color: #cd5831;
-    &:hover {
-      @include my-mixin;
-    }
-  }
-  .about .content .icon-box i,
-  .counts .count-box i,
-  .services .icon {
-    color: #e0876a;
-  }
-  .services .title::after, .testimonials .testimonial-item{
-    background: #e0876a;
-  }
-  .section-title h2 {
-    color: #e0876a;
-  }
-  .portfolio #portfolio-flters li:hover,
-  .portfolio #portfolio-flters li.filter-active {
-    background-color: #e0876a;
-  }
-  .col-lg-4 .col-md-6,
-  .pricing .box .btn-buy {
-    background-color: #e0876a;
-    color: white;
-    border: #e0876a 2px solid;
-  }
-  .pricing .recommended {
-    background-color: #e0876a;
-  }
-  .pricing .box h4 {
-    color: #e0876a;
-  }
-  .pricing .recommended h4 {
-    color: white;
-  }
-  .faq .faq-list .icon-help {
-    color: #cd5831;
-  }
-  .faq .faq-list a,
-  a.collapse {
-    color: #e0876a;
-  }
-  .contact .contact-info i,
-  .bx-chevron-right:before,
-  #footer .footer-top .footer-links ul i {
-    color: #e0876a;
-  }
-  .contact .php-email-form button[type="submit"],
-  #footer .footer-top .footer-newsletter form input[type="submit"],
-  .back-to-top,
-  .credits a {
-    color: white;
-    background-color: #e0876a;
-  }
-  #footer .footer-top .footer-newsletter form input[type="submit"]:hover,
-  .contact .php-email-form button[type="submit"]:hover,
-  #hero .btn-get-started:hover {
-    border: #cd5831 2px;
-    background-color: #cd5831;
-    color: white;
-  }
-  .faq .faq-list a.collapsed:hover,
-  #footer .footer-top .footer-links ul a:hover,
-  .contact .contact-info a:hover {
-    color: #e0876a;
-  }
-
-  .pricing .recommended .btn-buy:hover {
-    @include my-mixin;
-    border: white 2px solid;
-  }
-
-  .btn-wrap a:hover {
-    color: #e0876a;
-    background-color: white;
-  }
-  .pricing .box .btn-buy {
-    border: white 2px solid;
-    &:hover {
-      @include my-mixin;
-
-      border: 2px solid #e0876a;
-    }
-  }
-  .back-to-top {
-    &:hover {
-      @include my-mixin;
-
-      i {
-        color: #e0876a;
+  #hero {
+    .carousel-indicators {
+      li {
+        color: $base-color;
+        &:hover {
+          @include my-mixin;
+        }
+        &.active {
+          color: $base-color;
+          background-color: $primary-text;
+          &:hover {
+            @include my-mixin;
+          }
+        }
       }
     }
   }
-  .scroll-top,
-  .page-header .cta-btn,
-  #footer .footer-top .social-links a {
-    &:hover {
-      @include my-mixin;
+
+  .image-container {
+    img {
+      max-width: 600px;
+    }
+    div {
+      text-align: center;
     }
   }
-  #footer .footer-top {
-    @include theme-colors(footer);
-  }
-  &.transparency {
-    #header {
-      @include theme-colors(home);
+  #footer {
+    .footer-top {
+      @include theme-colors(footer);
     }
-  }
-  .header-social-links a {
-    color: #e0876a;
-    &:hover {
+    .social-links {
       color: white;
     }
   }
-  .about .content ul i {
-    color:#cd5831;
+
+  .about .content .icon-box i,
+  .counts .count-box i,
+  .services .icon {
+    color: $primary-text;
   }
-  .contact .info-item i{
-    border: 1px solid #e0876a;
-  &:hover {
-    background-color: #cd5831;
-    color: white;
+  .services .title::after,
+  .testimonials .testimonial-item {
+    background: $primary-text;
   }
-}
-#footer .footer-top .social-links a {
+  .section-title h2 {
+    color: $primary-text;
+  }
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    background-color: $primary-text;
+  }
+  .col-lg-4 .col-md-6,
+  .pricing .box .btn-buy {
+    background-color: $primary-text;
     color: white;
+    border: $primary-text 2px solid;
+  }
+  .pricing {
+    .recommended {
+      background-color: $primary-text;
+
+      .box h4 {
+        color: $primary-text;
+      }
+      h4 {
+        color: white;
+      }
+      .btn-buy:hover {
+        @include my-mixin;
+        border: white 2px solid;
+      }
+    }
+  }
+
+    .faq .faq-list .icon-help {
+      color: $base-color;
+    }
+    .faq .faq-list a,
+    a.collapse {
+      color: $primary-text;
+    }
+    .contact .contact-info i,
+    .bx-chevron-right:before,
+    #footer .footer-top .footer-links ul i {
+      color: $primary-text;
+    }
+    .contact .php-email-form button[type="submit"],
+    #footer .footer-top .footer-newsletter form input[type="submit"],
+    .back-to-top,
+    .credits a {
+      color: white;
+      background-color: $primary-text;
+    }
+    #footer .footer-top .footer-newsletter form input[type="submit"]:hover,
+    .contact .php-email-form button[type="submit"]:hover,
+    #hero .btn-get-started:hover {
+      border: $base-color 2px;
+      background-color: $base-color;
+      color: white;
+    }
+    #hero .btn-get-started 
+    .faq .faq-list a.collapsed:hover,
+    #footer .footer-top .footer-links ul a:hover,
+    .contact .contact-info a:hover {
+      color: $primary-text;
+    }
+
+    .our-tours {
+      text-align: center;
+      h2 {
+        text-decoration: underline;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $primary-text;
+        margin: 10px;
+      }
+      img {
+        max-width: 600px;
+      }
+    }
+
+    .things-to-do {
+      p {
+        color: $primary-text;
+        margin: 10px;
+      }
+
+      img {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      li {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 50px;
+        margin: 20px;
+      }
+    }
+
+    .btn-wrap a:hover {
+      color: $primary-text;
+      background-color: white;
+    }
+    .pricing .box .btn-buy {
+      border: white 2px solid;
+      &:hover {
+        @include my-mixin;
+
+        border: 2px solid $primary-text;
+      }
+    }
+    .back-to-top {
+      &:hover {
+        @include my-mixin;
+
+        i {
+          color: $primary-text;
+        }
+      }
+    }
+    .scroll-top,
+    .page-header .cta-btn,
+    #footer .footer-top .social-links a {
+      &:hover {
+        @include my-mixin;
+      }
+    }
+
+    &.transparency {
+      #header {
+        @include theme-colors(home);
+      }
+    }
+    .header-social-links a {
+      color: $primary-text;
+      &:hover {
+        color: white;
+      }
+    }
+    .about .content ul i {
+      color: $base-color;
+    }
+    .contact .info-item i {
+      border: 1px solid $primary-text;
+      &:hover {
+        background-color: $base-color;
+        color: white;
+      }
+    }
+
+    .pompeii-images img {
+      max-width: 600px;
+      width: 30%;
+    }
+
+
+  
+
+  .things-to-do {
+    p {
+      color: $primary-text;
+      margin: 10px;
+    }
+    img {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    li {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 50px;
+      margin: 20px;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
     background-color: #e0876a;
+    color: white;
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    img {
+      height: 30px;
+    }
+  }
+  .contact-us {
+    margin: 0 auto;
+    width: fit-content;
+    input {
+      margin-bottom: 15px;
+      margin-top: 5px;
+    }
+  }
+
+  .flex-item {
+    color: $primary-text;
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      border-radius: 3%;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 , h2 {
+      text-decoration: underline;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .gallery-h2, .gallery-h1{
+    text-decoration: underline;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .breadCrumbs{
+    text-align: left;
+    a {
+      color: $primary-text;
+
+    }
+  }
+  .image-grid {
+    display: grid;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: calc(100% - 30px);
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 10px auto;
+    img{
+      &:hover{
+        transform: scale(1.2);
+        transition: 0.3s;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 1/5;
+  }
+  .gallery-item:nth-child(2) {
+    grid-column-start: span 4;
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+  .gallery-item:nth-child(5) {
+    grid-row: 2/5;
+    grid-column: 3/5;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .breadCrumbsWrapper{
+    width: 100%;
+  }
+  .bx-help-circle::before{
+    color: $primary-text;
+  }
+  .gallery-wrapper{
+    margin-top: 75px;
+    padding-left: 50px;
+  }
+  
 }
-}
+

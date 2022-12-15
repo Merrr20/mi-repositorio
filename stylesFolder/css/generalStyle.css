@@ -22,20 +22,6 @@ form {
   margin-top: 50px;
 }
 
-body h1 {
-  color: #e0876a;
-}
-
-body h2 {
-  color: #e0876a;
-}
-
-/*li {
-    display: inline;
-    padding: 40px;
-    
-}
-*/
 fieldset {
   max-width: 400px;
   max-height: 400px;
@@ -76,39 +62,12 @@ legend {
 .button-tours:hover {
   background-color: rgb(231, 206, 202);
 }
-
-/*
-.nav-bar {
-    display: flex;
-    margin-bottom: 30px;
-    margin-top: 20px;
-
-}
-
-.nav-bar a {
-    color: #e0876a;
-    text-decoration: none;
-}
-*/
 .c-us-a {
   color: #e0876a;
   text-decoration: underline;
 }
 
-#name,
-#e-mail,
-#last-name,
-#tel {
-  width: 100%;
-}
 
-.image-container img {
-  max-width: 600px;
-}
-
-.image-container div {
-  text-align: center;
-}
 
 h2 {
   text-align: center;
@@ -122,14 +81,6 @@ iframe {
   max-width: 100%;
 }
 
-.pompeii-images img {
-  max-width: 600px;
-  width: 30%;
-}
-
-.pompeii-images {
-  text-align: center;
-}
 
 .city-tour,
 .capri-tours,
@@ -163,15 +114,6 @@ table {
   color: #cd5831;
 }
 
-.our-tours h2 {
-  text-decoration: underline;
-  margin-bottom: 20px;
-}
-
-.our-tours p {
-  color: #e0876a;
-  margin: 10px;
-}
 
 .tours {
   text-align: center;
@@ -179,9 +121,6 @@ table {
   font-size: 50px;
 }
 
-.our-tours img {
-  max-width: 600px;
-}
 
 .our-tours {
   text-align: center;
@@ -199,45 +138,9 @@ hr {
   border: none;
 }
 
-.things-to-do p {
-  color: #e0876a;
-  margin: 10px;
-}
 
-.things-to-do img {
-  max-width: 600px;
-  margin: 0 auto;
-}
 
-.things-to-do li {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
 
-.things-to-do h1 {
-  text-align: center;
-  text-decoration: underline;
-  font-size: 50px;
-  margin: 20px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 3px;
-  background-color: #e0876a;
-  color: white;
-  margin-top: 100px;
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
-  left: 0;
-}
-
-.footer img {
-  height: 30px;
-}
 
 .footer-contact-us {
   position: absolute;
@@ -245,15 +148,6 @@ hr {
   width: 100%;
 }
 
-.contact-us {
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.contact-us input {
-  margin-bottom: 15px;
-  margin-top: 5px;
-}
 
 .flex-container-services {
   padding: 10px;
@@ -263,23 +157,9 @@ hr {
   align-items: center;
 }
 
-.flex-item img {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
-  border-radius: 3%;
-}
 
-.flex-item {
-  color: #e0876a;
-}
 
-.flex-item h2,
-h1 {
-  text-decoration: underline;
-  margin: 0 auto;
-  text-align: center;
-}
+
 
 @media screen and (max-width: 768px) {
   .image-container img,
@@ -292,11 +172,7 @@ h1 {
   }
 }
 
-.flex-item li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .youtube-video {
   text-align: center;
@@ -364,9 +240,3 @@ h1 {
 .nav-item a {
   color: #e0876a;
 }
-body a:hover {
-  color: #292929;
-  background-color: #fbefcc;
-}
-
-
